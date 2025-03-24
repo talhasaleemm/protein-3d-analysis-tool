@@ -1,0 +1,17 @@
+Requirements
+```text
+numpy
+pandas
+matplotlib
+seaborn
+requests
+biopython
+scikit-learn
+py3Dmol
+ipywidgets
+jupyter
+
+Note: For Google Colab, ensure widget support is enabled:
+from google.colab import output
+output.enable_custom_widget_manager()
+
