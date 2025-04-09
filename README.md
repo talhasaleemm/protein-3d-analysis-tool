@@ -45,12 +45,14 @@ pip install biopython  # If not already installed
 ## 🚀 Usage Workflow
 
 ### End-User Flow
-```mermaid
-flowchart TD
-    A[Open notebooks/demo.ipynb] --> B[Run create_interface()]
-    B --> C[Input PDB ID]
-    C --> D[View Interactive Report]
-```
++--------------------------+     +---------------------------+     +------------------+
+| Open notebooks/demo.ipynb | --> | Run create_interface()    | --> | Input PDB ID     |
++--------------------------+     +---------------------------+     +------------------+
+          |
+          v
++--------------------------+
+| View Interactive Report  |
++--------------------------+
 
 ### Developer Flow
 ```mermaid
