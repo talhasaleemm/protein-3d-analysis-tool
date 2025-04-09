@@ -71,12 +71,18 @@ mkdir screenshots
 
 ---
 
-## 📚 Folder Cheat Sheet
-
-| Folder         | Maintained By       | Key Contents                 |
-|----------------|---------------------|------------------------------|
-| `notebooks/`   | End-users           | Jupyter interface            |
-| `src/`         | Developers          | Python source code           |
-| `screenshots/` | Documentation team  | Example images               |
-
-> **Note**: Test diagrams at [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/)
+## Repository Structure
+```
+protein-3d-analysis-tool/
+├── notebooks/
+│   └── demo.ipynb       # Interactive demo notebook
+├── screenshots/       
+│   ├── input.png
+│   ├── style-dropdown.png
+│   └── report.png
+├── src/
+│   └── main.py          # Core analysis logic
+├── README.md            
+├── requirements.txt     # Python dependencies 
+└── setup.py
+```
