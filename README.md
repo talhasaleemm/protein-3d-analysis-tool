@@ -2,87 +2,103 @@
 
 A comprehensive tool for analyzing protein structures from the PDB with 3D visualization, feature engineering, and machine learning classification.
 
-## Features
-- PDB file fetching and metadata extraction
-- Interactive 3D visualization with multiple display styles
-- Structural feature engineering (spatial coordinates, angles, distances)
-- Random Forest classification of structural regions
-- Automated report generation with visualizations
-- Jupyter-based interactive interface
+---
+
+## Repository Structure & Purpose
+
+### 📁 `src/` - Core Application Code
+**Purpose**: Contains all Python source code for the analysis pipeline  
+**Audience**: Developers, Contributors  
+**Key Files**:
+- `main.py`: Central script with all core functionalities
+- **Usage**:
+  ```python
+  # Import specific functions for advanced usage
+  from src.main import run_analysis, create_interface
+  ```
+
+### 📁 `notebooks/` - Interactive Demo
+**Purpose**: Jupyter Notebook interface for end-users  
+**Audience**: Researchers, Students, Non-coders  
+**Key Files**:
+- `demo.ipynb`: Ready-to-run interface (primary user entry point)
+- **Usage**:
+  ```bash
+  jupyter notebook notebooks/demo.ipynb
+  ```
+
+### 📁 `screenshots/` (Optional) - Documentation Assets
+**Purpose**: Stores visual examples for documentation  
+**Audience**: Documentation Maintainers  
+**Usage**: Update when adding new features to keep visuals current
 
 ---
 
-## Installation
-```bash
-# Clone the repository
-git clone https://github.com/talhasaleemm/protein-3d-analysis-tool.git
-cd protein-3d-analysis-tool
+## 👥 Audience Guide
 
-# Install dependencies
+### 1. End-Users (Biologists/Researchers)
+**Focus**: `notebooks/`  
+**What You'll Do**:
+1. Run the Jupyter Notebook interface
+2. Input PDB IDs through widgets
+3. View interactive 3D visualizations
+4. Generate analysis reports
+
+### 2. Developers/Contributors
+**Focus**: `src/` + `requirements.txt`  
+**What You'll Do**:
+1. Modify core logic in `main.py`
+2. Add new features to the analysis pipeline
+3. Improve machine learning components
+4. Update dependencies in `requirements.txt`
+
+### 3. Educators/Students
+**Focus**: `notebooks/` + `src/`  
+**What You'll Do**:
+1. Study the demo notebook for workflow examples
+2. Experiment with code in `src/` for learning purposes
+3. Modify visualization parameters for custom analyses
+
+---
+
+## 🛠️ Installation & Setup
+
+```bash
+# For All Users
+git clone https://github.com/tabasaleemm/protein-3d-analysis-tool.git
+cd protein-3d-analysis-tool
 pip install -r requirements.txt
 
-# Install BioPython (if not already included)
+# For BioPython Users
 pip install biopython
 ```
 
 ---
 
-## Usage
+## 🚀 Usage Workflow
 
-### 1. Launch the Jupyter Interface
-```bash
-jupyter notebook
+### End-User Flow
+```mermaid
+graph TD
+    A[Open notebooks/demo.ipynb] --> B[Run create_interface()]
+    B --> C[Input PDB ID]
+    C --> D[View Interactive Report]
 ```
-- Open the demo notebook:  
-  **`notebooks/demo.ipynb`**
 
-### 2. Interactive Analysis
-1. **Enter a PDB ID** (e.g., `1BNA`, `4HHB`, `1CRN`)  
-   <img src="screenshots/input.png" width="400" alt="PDB ID Input">
-
-2. **Select Visualization Style**:  
-   Choose from `cartoon`, `stick`, `sphere`, or `surface`  
-   <img src="screenshots/style-dropdown.png" width="300" alt="Style Dropdown">
-
-3. Click **"Run Analysis"** to generate:
-   - 3D interactive visualization
-   - Machine learning performance metrics
-   - Feature importance plots
-   - Structural metadata report
-
-### 3. Example Output
-<img src="screenshots/report.png" width="800" alt="Analysis Report">
-
----
-
-### Command-Line Usage (Optional)
-Run directly from Python:
-```python
-from src.main import run_analysis
-
-# Generate analysis report for a PDB structure
-df, model = run_analysis('1BNA', view_style='surface')
+### Developer Flow
+```mermaid
+graph TD
+    A[Edit src/main.py] --> B[Test Changes]
+    B --> C[Update Requirements]
+    C --> D[Commit to Repository]
 ```
 
 ---
 
-## Notes
-- **Google Colab Users**: Enable widgets first:
-  ```python
-  from google.colab import output
-  output.enable_custom_widget_manager()
-  ```
-- Valid PDB IDs can be found on the [RCSB PDB website](https://www.rcsb.org/)
-- Large structures (>10,000 atoms) may take longer to process
+## 📚 Folder Cheat Sheet
 
----
-
-## Repository Structure
-```
-├── notebooks/
-│   └── demo.ipynb       # Interactive demo notebook
-├── src/
-│   └── main.py          # Core analysis logic
-├── requirements.txt     # Python dependencies
-└── README.md            # This document
-```
+| Folder | Contains | Modified By |
+|--------|----------|-------------|
+| `notebooks/` | User interface | End-users via Jupyter |
+| `src/` | Analysis engine | Python developers |
+| `screenshots/` | Documentation assets | Project maintainers |
