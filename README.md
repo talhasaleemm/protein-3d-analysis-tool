@@ -15,7 +15,7 @@ A comprehensive tool for analyzing protein structures from the PDB with 3D visua
 ## Installation
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/protein-3d-analysis-tool.git
+git clone https://github.com/talhasaleemm/protein-3d-analysis-tool.git
 cd protein-3d-analysis-tool
 
 # Install dependencies
