@@ -22,7 +22,7 @@ A comprehensive tool for analyzing protein structures from the PDB with 3D visua
 
 ---
 
-## 👥 Audience Guide
+##  Audience Guide
 
 | User Type               | Primary Folder      | Activities                              |
 |-------------------------|---------------------|-----------------------------------------|
@@ -32,7 +32,7 @@ A comprehensive tool for analyzing protein structures from the PDB with 3D visua
 
 ---
 
-## 🛠️ Installation
+##  Installation
 
 ```bash
 git clone https://github.com/tabasaleemm/protein-3d-analysis-tool.git
@@ -42,7 +42,7 @@ pip install biopython  # If not already installed
 ```
 
 ---
-## 🚀 Usage Workflow
+##  Usage Workflow
 
 ### End-User Flow
 ```mermaid
@@ -62,7 +62,7 @@ graph TD
 
 ---
 
-## 📸 Example Interface (Optional)
+##  Example Interface (Optional)
 Add screenshots to `screenshots/` folder:
 ```bash
 mkdir screenshots
